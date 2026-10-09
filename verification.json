@@ -1,0 +1,14 @@
+{
+  "contract": "counterfactual",
+  "status": "ready_for_manual_portal_submission",
+  "verified_on": "2026-10-09",
+  "source_sha256": "0beab5642a13969f7ca8d94096198032897136a52dafd9af6bb38329c2c87a5f",
+  "source_commit": "03498022edd840c418acc9f2d3ad650b16b07aaa",
+  "deployed": true,
+  "address": "0x1c7C673649E0f5AcC7c4fFF12dB53318102dDc34",
+  "live_consensus_tested": true,
+  "live_cases_passed": 3,
+  "local_test_groups_passed": 10,
+  "sdk_validation": "pass_without_warnings",
+  "portal_submitted": false
+}

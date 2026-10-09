@@ -1,0 +1,141 @@
+{
+  "network": "studionet",
+  "executed": true,
+  "cases": [
+    {
+      "id": "counterfactual-all-001",
+      "open_args": [
+        "counterfactual-all-001",
+        "all",
+        0,
+        "A signed test report exists\nA release owner is named\nA rollback plan exists"
+      ],
+      "submit_method": "submit_subject",
+      "submit_args": [
+        "counterfactual-all-001",
+        "A signed test report exists and the release owner is Alice. No rollback plan exists."
+      ],
+      "expected": {
+        "outcome": 2,
+        "met_mask": 3,
+        "change_mask": 4
+      },
+      "evaluate_args": [
+        "counterfactual-all-001"
+      ],
+      "read_method": "get_result",
+      "transactions": {
+        "open_case": "0x4e07c22704aa29abaf9c9e495ec8683f396bae9408275607cfd9b9877938edc2",
+        "submit_subject": "0xce07eac99c533a385eea034083be9ab26b29a5837f72441b3f8540848830c251",
+        "evaluate": "0x16747e94ac0931bd582607ae92665bfe21fb395d13408330be838e434248bc41"
+      },
+      "result": {
+        "change_mask": 4,
+        "met_mask": 3,
+        "outcome": 2,
+        "reason": "all-unmet-needed",
+        "result_hash": "21bb158729177fa03a52deb4a9749bf12dd195cfe139be743a6c6745de9690fa",
+        "subject_hash": "e6df687d1ed2353c44d225d447a494021e37fbc0aa2282f3e65e7f2d81a7a3a5",
+        "terms_hash": "a9ecb6275fe785ccf2529c4ce2d5e88fa19ab5e03548c6f9cf2f1182a8037494"
+      },
+      "matches_expected": true,
+      "receipt": {
+        "transaction": "0x16747e94ac0931bd582607ae92665bfe21fb395d13408330be838e434248bc41",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false
+      }
+    },
+    {
+      "id": "counterfactual-k-001",
+      "open_args": [
+        "counterfactual-k-001",
+        "kofn",
+        2,
+        "A signed test report exists\nA release owner is named\nA rollback plan exists"
+      ],
+      "submit_method": "submit_subject",
+      "submit_args": [
+        "counterfactual-k-001",
+        "A signed test report exists. No release owner is named and no rollback plan exists."
+      ],
+      "expected": {
+        "outcome": 2,
+        "met_mask": 1,
+        "change_mask": 2
+      },
+      "evaluate_args": [
+        "counterfactual-k-001"
+      ],
+      "read_method": "get_result",
+      "transactions": {
+        "open_case": "0xdfc0ad813758a5960a2673cc6c62c2edafbbfe95b1907c238e427c6d11948190",
+        "submit_subject": "0x945aaef9fada6fedf1f4cacbf63eb1170c5a9067f240b1b5e23e2f9cf5526068",
+        "evaluate": "0x43f2d26e2a03f3b9bf5708b3bd9fa71aa38b157ab31d9db20eeecd70f8c9ea84"
+      },
+      "result": {
+        "change_mask": 2,
+        "met_mask": 1,
+        "outcome": 2,
+        "reason": "need-1",
+        "result_hash": "c786107cd3585156096c392821059c125ff373908864af1977757186c9657526",
+        "subject_hash": "336e8c197e1484dce6a39910b1b77b538c32d294275abe37362c96091772f1e0",
+        "terms_hash": "74fd902fbdee8fd0de62b4ebbf3e58be8d0b1cef1315792315d7384775b5e82b"
+      },
+      "matches_expected": true,
+      "receipt": {
+        "transaction": "0x43f2d26e2a03f3b9bf5708b3bd9fa71aa38b157ab31d9db20eeecd70f8c9ea84",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false
+      }
+    },
+    {
+      "id": "counterfactual-pass-001",
+      "open_args": [
+        "counterfactual-pass-001",
+        "all",
+        0,
+        "A signed test report exists\nA release owner is named"
+      ],
+      "submit_method": "submit_subject",
+      "submit_args": [
+        "counterfactual-pass-001",
+        "A signed test report exists and the release owner is Alice."
+      ],
+      "expected": {
+        "outcome": 1,
+        "met_mask": 3,
+        "change_mask": 0
+      },
+      "evaluate_args": [
+        "counterfactual-pass-001"
+      ],
+      "read_method": "get_result",
+      "transactions": {
+        "open_case": "0xfa5ca7e28ef5e2ac8d39f88650501f2efbd3bc83508b2a69171dd0ab5b0d7375",
+        "submit_subject": "0xb1d66d911bb786c3074d0dba2145ee71ab1fddd773e9e247b082268abc207fe1",
+        "evaluate": "0x97340c379c16ee50f880e940a00f8e3430f7f60327627d39a6c01cf5147cf989"
+      },
+      "result": {
+        "change_mask": 0,
+        "met_mask": 3,
+        "outcome": 1,
+        "reason": "passes",
+        "result_hash": "0abe2d0089131748a9bb6d31ee9a0fc4deba03e5682f881737d5af6e095dd163",
+        "subject_hash": "e92eaefc3530cc62fbc176aa5faf7bc5207d293d9615291f7b53220f8c57a446",
+        "terms_hash": "5ecaf314007978502b3b3b649e548b0d763bfca5d783054f962c356af2244029"
+      },
+      "matches_expected": true,
+      "receipt": {
+        "transaction": "0x97340c379c16ee50f880e940a00f8e3430f7f60327627d39a6c01cf5147cf989",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "leader_only": false
+      }
+    }
+  ]
+}
