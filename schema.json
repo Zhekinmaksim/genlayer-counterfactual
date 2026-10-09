@@ -1,0 +1,97 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "evaluate": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_outcome": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_result": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "minimal_change": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": [
+        {
+          "$rep": "string"
+        }
+      ]
+    },
+    "open_case": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ],
+        [
+          "mode",
+          "string"
+        ],
+        [
+          "k",
+          "int"
+        ],
+        [
+          "conditions_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "submit_subject": {
+      "params": [
+        [
+          "case_id",
+          "string"
+        ],
+        [
+          "subject",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}
